@@ -1,0 +1,122 @@
+[
+  {
+    "playerId": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://i.ibb.co.com/jXKGXZF/Virat-Kohli.jpg",
+    "role": "Batsman",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Medium",
+    "price": 1500000
+  },
+  {
+    "playerId": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co.com/v6xWpfLk/Babar-Azam.jpg",
+    "role": "Batsman",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Offbreak",
+    "price": 1200000
+  },
+  {
+    "playerId": 3,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/4wqFX900/SAH.jpg",
+    "role": "All-Rounder",
+    "battingType": "Left-Hand-Bat",
+    "bowlingType": "Left-arm Slow",
+    "price": 1350000
+  },
+  {
+    "playerId": 4,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://i.ibb.co.com/0RtFs1Qn/Ben-Strokes.jpg",
+    "role": "All-Rounder",
+    "battingType": "Left-Hand-Bat",
+    "bowlingType": "Right-arm Fast-medium",
+    "price": 1450000
+  },
+  {
+    "playerId": 5,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/PzJGwrRw/Ken-WIliam.jpg",
+    "role": "Batsman",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Offbreak",
+    "price": 1100000
+  },
+  {
+    "playerId": 6,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co.com/FLRKCLLx/Rashid.jpg",
+    "role": "Bowler",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Legbreak",
+    "price": 1250000
+  },
+  {
+    "playerId": 7,
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/Fb2BSYY3/Glenn.jpg",
+    "role": "All-Rounder",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Offbreak",
+    "price": 1300000
+  },
+  {
+    "playerId": 8,
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "image": "https://i.ibb.co.com/0pN5g8XF/Quinton.jpg",
+    "role": "Wicketkeeper",
+    "battingType": "Left-Hand-Bat",
+    "bowlingType": "None",
+    "price": 1150000
+  },
+  {
+    "playerId": 9,
+    "name": "Rohit Sharma",
+    "country": "India",
+    "image": "https://i.ibb.co.com/C3WM7Z0f/rohit.jpg",
+    "role": "Batsman",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Offbreak",
+    "price": 1400000
+  },
+  {
+    "playerId": 10,
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/5h6zTKy7/pat.jpg",
+    "role": "Bowler",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Fast",
+    "price": 1500000
+  },
+  {
+    "playerId": 11,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://i.ibb.co.com/YF7P6q4Z/jos.jpg",
+    "role": "Wicketkeeper",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "None",
+    "price": 1200000
+  },
+  {
+    "playerId": 12,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "image": "https://i.ibb.co.com/YgZCbNk/Jasprit.jpg",
+    "role": "Bowler",
+    "battingType": "Right-Hand-Bat",
+    "bowlingType": "Right-arm Fast",
+    "price": 1450000
+  }
+]
