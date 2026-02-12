@@ -14,7 +14,7 @@ function App() {
   const handleCoinCount = ()=>{
     setCoins(coins + 1000000)
   }
-  const notify = () => toast("Free Credit Claimed!");
+  const notify = () => toast("Free Credit Claimed! 1000000 Coins Added");
 
 //Coin Count End 
 
@@ -40,7 +40,7 @@ const handleAddSelectedPlayers = availablePlayer =>{
     setAddSelectedPlayers([...addSelectedPlayers, availablePlayer])
     setCoins(coins-availablePlayer.price)
      setCountSelectedPlayers(countSelectedPlayers + 1)
-    const addingNotify = () => toast(`You have chosen ${availablePlayer.name}`);
+    const addingNotify = () => toast(`You have chosen ${availablePlayer.name} and spent ${availablePlayer.price} coins!`);
     addingNotify();
      console.log("added")
     }
@@ -55,11 +55,11 @@ const handleAddSelectedPlayers = availablePlayer =>{
       <ToastContainer position='top-center'></ToastContainer>
 
     <div className=''>
-      <div className='flex justify-between'>
-        <h2>Available Players</h2>
-        <div className='flex justify-between items-center gap-4'>
-                <button onClick={()=> setView('available')}> Available</button>
-                <button onClick={()=> {setView('selected')}}> Selected ({countSelectedPlayers})</button>
+      <div className='flex justify-between items-center mb-4'>
+        <h2 className='text-2xl font-bold'>Available Players</h2>
+        <div className='flex justify-end items-center'>
+                <button className='bg-lime-300 font-bold p-4 rounded-l-2xl' onClick={()=> setView('available')}> Available</button>
+                <button className='active:bg-lime-300 hover:bg-lime-100 font-bold p-4 rounded-r-2xl' onClick={()=> {setView('selected')}}> Selected ({countSelectedPlayers})</button>
         </div>
       </div>
 

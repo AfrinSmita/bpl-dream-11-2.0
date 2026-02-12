@@ -10,11 +10,8 @@ const AvailablePlayers = ({handleAddSelectedPlayers}) => {
         .then(data => setAvailablePlayers(data))
     },[]);
     return (
-        <div>
-            <h3>hi</h3>
-            <p>{availablePlayers.length}</p>
-          
-
+        <div className='grid grid-cols-3 items-center gap-4'>
+ 
             {
                 availablePlayers.map(availablePlayer=>
                     <AvailablePlayer
