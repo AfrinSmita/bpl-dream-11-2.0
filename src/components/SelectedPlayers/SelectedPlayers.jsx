@@ -1,18 +1,20 @@
 import React from 'react';
 import SelectedPlayer from '../SelectedPlayer/SelectedPlayer';
 
-const SelectedPlayers = ({addSelectedPlayers,countSelectedPlayers}) => {
+const SelectedPlayers = ({addSelectedPlayers,handleRemovePlayer}) => {
 
 
     return (
         <div>
-            <h3>Selected:{countSelectedPlayers}/12</h3>
+           
             
             {
                 addSelectedPlayers.map( selectedPlayer=> 
                 <SelectedPlayer
-                    key={selectedPlayer.index}
+                    key={selectedPlayer.playerId}
                     selectedPlayer={selectedPlayer}
+                    handleRemovePlayer={handleRemovePlayer}
+                   
                 
                 ></SelectedPlayer>)
             }

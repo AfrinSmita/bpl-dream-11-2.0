@@ -47,6 +47,15 @@ const handleAddSelectedPlayers = availablePlayer =>{
   
 }
 
+//Delete Player
+
+const handleRemovePlayer = (playerId) => {
+  const remainingPlayers = addSelectedPlayers.filter(selectedPlayer => selectedPlayer.playerId !== playerId);
+  setAddSelectedPlayers(remainingPlayers);
+  setCountSelectedPlayers(countSelectedPlayers - 1);
+  console.log("deleting")
+};
+
 
   return (
     <>
@@ -56,18 +65,21 @@ const handleAddSelectedPlayers = availablePlayer =>{
 
     <div className=''>
       <div className='flex justify-between items-center mb-4'>
-        <h2 className='text-2xl font-bold'>Available Players</h2>
+        <h2 className='text-2xl font-bold'>
+           {view === "available" ? "Available Players" : `Selected Players: ${countSelectedPlayers}/12`}
+        </h2>
         <div className='flex justify-end items-center'>
-                <button className='bg-lime-300 font-bold p-4 rounded-l-2xl' onClick={()=> setView('available')}> Available</button>
-                <button className='active:bg-lime-300 hover:bg-lime-100 font-bold p-4 rounded-r-2xl' onClick={()=> {setView('selected')}}> Selected ({countSelectedPlayers})</button>
+                <button className={`hover:bg-lime-500 font-bold p-4 rounded-l-2xl ${view === 'available' ? 'bg-lime-300' : 'bg-lime-100'}`} onClick={()=> setView('available')}> Available</button>
+                <button className={`hover:bg-lime-500 font-bold p-4 rounded-r-2xl ${view === 'selected' ? 'bg-lime-300' : 'bg-lime-100'}` }onClick={()=> {setView('selected')}}> Selected ({countSelectedPlayers})</button>
         </div>
       </div>
 
       {
         view=== "available" && <AvailablePlayers handleAddSelectedPlayers={handleAddSelectedPlayers}></AvailablePlayers>
+        
       }
       {
-        view=== "selected" &&  <SelectedPlayers countSelectedPlayers={countSelectedPlayers} addSelectedPlayers={addSelectedPlayers} ></SelectedPlayers>
+        view=== "selected" &&  <SelectedPlayers countSelectedPlayers={countSelectedPlayers} addSelectedPlayers={addSelectedPlayers} handleRemovePlayer={handleRemovePlayer} ></SelectedPlayers>
       }
 
     </div>
