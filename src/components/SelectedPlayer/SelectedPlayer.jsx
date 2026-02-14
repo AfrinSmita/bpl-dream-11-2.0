@@ -17,8 +17,8 @@ const SelectedPlayer = ({selectedPlayer,handleRemovePlayer}) => {
                      <button onClick={()=>handleRemovePlayer(playerId)} className='text-red-500 text-2xl'><RiDeleteBinLine/></button>   
                 </div>
             </div>
-            
-        </div>
+       </div>
+       
     );
 };
 

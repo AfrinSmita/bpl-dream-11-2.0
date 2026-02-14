@@ -31,19 +31,33 @@ const [countSelectedPlayers, setCountSelectedPlayers] = useState(0)
 //Player adding to the selected button
 const [addSelectedPlayers, setAddSelectedPlayers]= useState([])
 const handleAddSelectedPlayers = availablePlayer =>{
-  if(availablePlayer.price>coins){
+
+    const isAlreadySelected = addSelectedPlayers.find(
+    player => player.playerId === availablePlayer.playerId
+  );
+    if (isAlreadySelected) {
+    toast("You already selected this player!");
+    return;
+  }
+    if (addSelectedPlayers.length >= 6) {
+    toast("You can select only 6 players!");
+    return;
+  }
+
+   if(availablePlayer.price>coins){
     const notify2 = () => toast("You don't have enough coins to choose this player!");
     notify2(); 
 
   }
-  else{
+
+  else {
     setAddSelectedPlayers([...addSelectedPlayers, availablePlayer])
     setCoins(coins-availablePlayer.price)
      setCountSelectedPlayers(countSelectedPlayers + 1)
     const addingNotify = () => toast(`You have chosen ${availablePlayer.name} and spent ${availablePlayer.price} coins!`);
     addingNotify();
      console.log("added")
-    }
+  }
   
 }
 
@@ -56,6 +70,14 @@ const handleRemovePlayer = (playerId) => {
   console.log("deleting")
 };
 
+// const [addMorePlayer, setAddMorePlayer] = useState([])
+
+const handleAddMorePlayer = () => {
+  // setAddMorePlayer([...addMorePlayer, availablePlayer])
+  setView("available")
+}
+
+
 
   return (
     <>
@@ -66,7 +88,7 @@ const handleRemovePlayer = (playerId) => {
     <div className=''>
       <div className='flex justify-between items-center mb-4'>
         <h2 className='text-2xl font-bold'>
-           {view === "available" ? "Available Players" : `Selected Players: ${countSelectedPlayers}/12`}
+           {view === "available" ? "Available Players" : `Selected Players: ${countSelectedPlayers}/6`}
         </h2>
         <div className='flex justify-end items-center'>
                 <button className={`hover:bg-lime-500 font-bold p-4 rounded-l-2xl ${view === 'available' ? 'bg-lime-300' : 'bg-lime-100'}`} onClick={()=> setView('available')}> Available</button>
@@ -79,7 +101,7 @@ const handleRemovePlayer = (playerId) => {
         
       }
       {
-        view=== "selected" &&  <SelectedPlayers countSelectedPlayers={countSelectedPlayers} addSelectedPlayers={addSelectedPlayers} handleRemovePlayer={handleRemovePlayer} ></SelectedPlayers>
+        view=== "selected" &&  <SelectedPlayers countSelectedPlayers={countSelectedPlayers} addSelectedPlayers={addSelectedPlayers} handleRemovePlayer={handleRemovePlayer} handleAddMorePlayer={handleAddMorePlayer} ></SelectedPlayers>
       }
 
     </div>
