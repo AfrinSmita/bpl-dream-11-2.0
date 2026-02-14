@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero'
  import { ToastContainer, toast } from 'react-toastify';
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers';
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -103,7 +104,7 @@ const handleAddMorePlayer = () => {
       {
         view=== "selected" &&  <SelectedPlayers countSelectedPlayers={countSelectedPlayers} addSelectedPlayers={addSelectedPlayers} handleRemovePlayer={handleRemovePlayer} handleAddMorePlayer={handleAddMorePlayer} ></SelectedPlayers>
       }
-
+      <Footer></Footer>
     </div>
       
      
