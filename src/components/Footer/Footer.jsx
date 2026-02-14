@@ -8,10 +8,10 @@ const Footer = () => {
             <div className="relative bg-gray-900 text-white mt-50 left-0 ">
 
             <footer className="pt-32 pb-10 px-10 w-full">
-                <div className='flex justify-center items-center mb-16'>
+                <div className='flex justify-center items-center my-16'>
                     <img className='center' src={logo} alt="" />
                 </div>
-                <div className="max-w-6xl mx-auto grid grid-cols-3">
+                <div className="grid grid-cols-3 gap-4">
                 {/* About Us */}
                 <div className='text-left'>
                     <h3 className="font-bold mb-2">About Us</h3>
@@ -19,9 +19,9 @@ const Footer = () => {
                 </div>
 
                 {/* Quick Links */}
-                <div>
+                <div className='mx-auto'>
                     <h3 className="font-bold mb-2">Quick Links</h3>
-                    <ul>
+                    <ul className='list-disc list-inside mx-auto text-left'>
                     <li>Home</li>
                     <li>Services</li>
                     <li>About</li>
@@ -50,11 +50,11 @@ const Footer = () => {
             </footer>
 
             {/* Floating Newsletter Card */}
-            <div className=''>
-                <div className='absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl py-10 px-30 bg-cover bg-center '
+            <div className='border-2 border-gray-100 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-xl'>
+                <div className=' bg-white rounded-xl py-10 px-30 bg-cover bg-center'
                 style={{ backgroundImage: `url(${shadow2})` }}>
                 <div className="mb-4 md:mb-0">
-                <h2 className="text-xl font-bold text-black">Subscribe to our Newsletter</h2>
+                <h2 className="text-2xl font-bold text-black">Subscribe to our Newsletter</h2>
                 <p className="text-gray-600">Get the latest updates and news right in your inbox!</p>
                 </div>
                 <div className="flex justify-between w-full mt-4 gap-4">
@@ -67,7 +67,7 @@ const Footer = () => {
                     Subscribe
                 </button>
                 </div>
-                </div>
+            </div>
             </div>
 
             </div>

@@ -4,6 +4,7 @@ import { BsCoin } from "react-icons/bs";
 
 const Header = ({coins}) => {
     return (
+        <div className=''>
         <div className='flex justify-between items-center'>
             <img src={logo} alt="" />
             <div className='flex justify-around items-center gap-4'>
@@ -11,8 +12,8 @@ const Header = ({coins}) => {
                 <a href="">Fixtures</a>
                 <a href="">Team</a>
                 <a href="">Schedule</a>
-                <div className='flex justify-evenly items-center gap-2'>
-                    <p>{coins} Coin</p>
+                <div className='flex justify-evenly items-center gap-2 border border-gray-300 p-2 rounded-md'>
+                    <p className='font-bold'>{coins} Coin</p>
                     <button >
                         <BsCoin className='text-2xl text-yellow-500'></BsCoin>
                     </button>
@@ -20,6 +21,7 @@ const Header = ({coins}) => {
             </div>
             
         </div>
+       </div> 
     );
 };
 

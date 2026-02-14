@@ -8,8 +8,8 @@ const AvailablePlayer = ({availablePlayer, handleAddSelectedPlayers}) => {
         <div className=''>
            <div className=''>
             <div className='p-4 border border-gray-300 rounded-lg'>
-                <div className=' w-full flex justify-center'>
-                    <img className='h-48 object-cover' src={image} alt="" />
+                <div className=' w-full flex justify-center mb-6 '>
+                    <img className='h-60 w-full object-cover rounded-2xl' src={image} alt="" />
                 </div>
                 
                 <div className='flex justify-start gap-2 items-center'>
